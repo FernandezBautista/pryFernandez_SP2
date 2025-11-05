@@ -31,7 +31,7 @@ namespace SP02
         {
             if (txtDistancia.Text == "")
             {
-                MessageBox.Show("Debe ingresar una distancia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar una distancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
