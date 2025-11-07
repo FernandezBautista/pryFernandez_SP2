@@ -38,6 +38,7 @@
             this.tabRegistro = new System.Windows.Forms.TabPage();
             this.tabConsultas = new System.Windows.Forms.TabPage();
             this.lstBoletosTotales = new System.Windows.Forms.ListBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudDias)).BeginInit();
             this.tabBoletos.SuspendLayout();
             this.tabRegistro.SuspendLayout();
@@ -100,7 +101,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.Location = new System.Drawing.Point(63, 104);
             this.btnCalcular.Name = "btnCalcular";
@@ -112,7 +113,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(241, 104);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -143,7 +144,7 @@
             this.tabRegistro.Location = new System.Drawing.Point(4, 22);
             this.tabRegistro.Name = "tabRegistro";
             this.tabRegistro.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRegistro.Size = new System.Drawing.Size(424, 136);
+            this.tabRegistro.Size = new System.Drawing.Size(424, 144);
             this.tabRegistro.TabIndex = 0;
             this.tabRegistro.Text = "Càlculo boletos";
             this.tabRegistro.UseVisualStyleBackColor = true;
@@ -168,11 +169,24 @@
             this.lstBoletosTotales.TabIndex = 0;
             this.lstBoletosTotales.SelectedIndexChanged += new System.EventHandler(this.lstBoletosTotales_SelectedIndexChanged);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(366, 188);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmBoletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 223);
+            this.ClientSize = new System.Drawing.Size(453, 218);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.tabBoletos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBoletos";
@@ -200,5 +214,6 @@
         private System.Windows.Forms.TabPage tabRegistro;
         private System.Windows.Forms.TabPage tabConsultas;
         private System.Windows.Forms.ListBox lstBoletosTotales;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
