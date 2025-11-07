@@ -12,6 +12,9 @@ namespace SP02
 {
     public partial class frmBoletos : Form
     {
+        string[,] matrizBoletos = new string[100, 4];
+        int indiceFila = 0;
+
         public frmBoletos()
         {
             InitializeComponent();
@@ -31,7 +34,13 @@ namespace SP02
         {
             if (txtDistancia.Text == "")
             {
-                MessageBox.Show("Debe ingresar una distancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar una distancia.", "Error");
+                return;
+            }
+
+            if (indiceFila >= 100)
+            {
+                MessageBox.Show("Historial lleno, no se pueden guardar más boletos.", "Error");
                 return;
             }
 
@@ -49,9 +58,15 @@ namespace SP02
                 textoDescuento = "Sí";
             }
 
-            string textoParaLista = "Distancia: " + distancia + " km, Días: " + dias + ", Descuento: " + textoDescuento + " - Total: $" + precioFinal;
+            matrizBoletos[indiceFila, 0] = distancia.ToString();
+            matrizBoletos[indiceFila, 1] = dias.ToString();
+            matrizBoletos[indiceFila, 2] = textoDescuento;
+            matrizBoletos[indiceFila, 3] = precioFinal.ToString();
 
-            lstBoletosTotales.Items.Add(textoParaLista);
+            indiceFila++;
+
+            string registroParaLaLista = "Dist: " + distancia + " km, Días: " + dias + ", Desc: " + textoDescuento + " - Total: $" + precioFinal;
+            lstBoletosTotales.Items.Add(registroParaLaLista);
 
             MessageBox.Show(
                 "Distancia de ida: " + distancia + " km\n" +
